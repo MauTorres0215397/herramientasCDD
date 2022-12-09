@@ -16,46 +16,92 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row justify-content-center mt-4 title">
+        <div class="row justify-content-center mt-4">
             <div class="col-xl-10 pt-5 mt-5 col-md-12">
+                <p class="section-title accent">Store Sales - data visualization</p>
+                <p class="pt-3">
+                    In this project we present some visualizations using the pandas, matplotlib and seaborn libraries,
+                    using a dataset extracted from <a
+                        href="https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data"
+                        target="_blank">Kaggle</a> .
+                    This dataset is composed of 5 tables that describe the sales
+                    of the "Favorita" store in Ecuador, what type of product was sold, if it was on promotion, the
+                    number of transactions, in addition to the oil prices that are suspected to affect the number of
+                    sales.<br>
+                    The content of each table is described below.
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3 section-title">
+            <div class="col-xl-10 col-md-12">
+                <p class="accent">Dataset content</p>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3 tables-descripcion">
+            <div class="col-xl-8  col-md-12 order-md-1 order-xl-1">
                 <p>
-                    StoreLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum nulla at neque dictum
-                    tincidunt. Praesent commodo metus at ante faucibus tristique non vel tortor. Fusce lectus leo,
-                    feugiat ac ullamcorper sit amet, blandit vel lorem. Etiam finibus, est vitae consequat feugiat,
-                    augue nisl condimentum velit, sed tristique urna augue quis magna.
+                    <span class="accent">Train_set: </span>
+                    Where sales by product family from January 2013 to September 2017 are described; store_nbr
+                    indicates the store number; family, the type of product; sales, the total sales of the family; and
+                    onpromotion, the number of products on promotion by family.
+                </p>
+                <p>
+                    <span class="accent">stores_set: </span>
+                    Describes the metadata of the stores, the city, province, type and its cluster (grouping of
+                    similar stores).
+                </p>
+                <p>
+                    <span class="accent">oil_set: </span>
+                    Describes the daily price of gasoline. Ecuador is a country dependent on the price of gasoline.
+                </p>
+                <p>
+                    <span class="accent">holiday_events_set: </span>
+                    Describes the holidays and their metadata, which day is celebrated, name, description and if it was
+                    transferred or not (the date on which it is celebrated is changed).
+                </p>
+                <p>
+                    <span class="accent">transactions_set: </span>
+                    Describes the number of daily transactions per store (does not include any additional data)
                 </p>
             </div>
         </div>
-        <div class="row justify-content-center pt-5">
+        <div class="row justify-content-center pt-3 section-title">
+            <div class="col-xl-10 col-md-12">
+                <p class="accent">Data visualization</p>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-3 ">
             <div class="col-xl-4  col-md-12 order-md-1 order-xl-1">
-                <p class="title">
-                    Lorem ipsum dolor sit amet.
+                <p class="accent">
+                    Sales over Time.
                 </p>
                 <p>
-                    Suspendisse dictum nulla at neque dictum tincidunt. Praesent commodo metus at ante faucibus
-                    tristique non vel tortor. Fusce lectus leo, feugiat ac ullamcorper sit amet, blandit vel lorem.
+                    The graph shows the average sales per month at national level, using animation and interpolation we
+                    can see how sales change during the 5 years covered by the dataset. <br>
+                    We can also see in yellow the maximum and minimum values.
                 </p>
             </div>
             <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-2">
-                <video width="550" autoplay loop muted>
+                <video width="520" autoplay loop muted>
                     <source src="content/video/salesInTime.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                  </video>
+                </video>
             </div>
         </div>
         <div class="row justify-content-center pt-5">
             <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1s">
-                <img src="https://picsum.photos/id/870/536/354?grayscale&blur=2" class="img-fluid">
+                <img src="content/img/plots/familyProducts2014.svg" class="img-fluid">
             </div>
             <div class="col-xl-4  col-md-12 order-md-1 order-xl-2">
-                <p class="title">
-                    Lorem ipsum dolor sit amet.
+                <p class="accent">
+                    Percentage of Sales per Family per Year
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum nulla at neque dictum
-                    tincidunt. Praesent commodo metus at ante faucibus tristique non vel tortor. Fusce lectus leo,
-                    feugiat ac ullamcorper sit amet, blandit vel lorem. Etiam finibus, est vitae consequat feugiat,
-                    augue nisl condimentum velit, sed tristique urna augue quis magna.
+                    In the pie chart we can observe the percentage of sales of each family for the year 2014.
+                    The slice with the legend other groups all the families with a percentage of less than 2%.
+                    We can also see that the largest slice is separated from the rest, to highlight which family sold
+                    the most.
+                    <br>
+                    To see the graphs of the other years, <a href="">click here</a>.
                 </p>
             </div>
         </div>
