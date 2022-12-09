@@ -16,6 +16,7 @@
 
 <body>
     <div class="container-fluid">
+        <!-- title -->
         <div class="row justify-content-center mt-4">
             <div class="col-xl-10 pt-5 mt-5 col-md-12">
                 <p class="section-title accent">Store Sales - data visualization</p>
@@ -31,6 +32,7 @@
                     The content of each table is described below.
             </div>
         </div>
+        <!-- data set content -->
         <div class="row justify-content-center pt-3 section-title">
             <div class="col-xl-10 col-md-12">
                 <p class="accent">Dataset content</p>
@@ -64,13 +66,15 @@
                 </p>
             </div>
         </div>
+        <!-- data visualization -->
         <div class="row justify-content-center pt-3 section-title">
             <div class="col-xl-10 col-md-12">
                 <p class="accent">Data visualization</p>
             </div>
         </div>
+        <!-- sales over time -->
         <div class="row justify-content-center pt-3 ">
-            <div class="col-xl-4  col-md-12 order-md-1 order-xl-1">
+            <div class="col-xl-4  col-md-12 order-md-1 order-xl-1 d-flex flex-column justify-content-center">
                 <p class="accent">
                     Sales over Time.
                 </p>
@@ -87,11 +91,12 @@
                 </video>
             </div>
         </div>
+        <!-- percentage of sales per family per year -->
         <div class="row justify-content-center pt-5">
-            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1s">
+            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1">
                 <img src="content/img/plots/familyProducts2014.svg" class="img-fluid">
             </div>
-            <div class="col-xl-4  col-md-12 order-md-1 order-xl-2">
+            <div class="col-xl-4  col-md-12 order-md-1 order-xl-2 d-flex flex-column justify-content-center">
                 <p class="accent">
                     Percentage of Sales per Family per Year
                 </p>
@@ -101,6 +106,55 @@
                     We can also see that the largest slice is separated from the rest, to highlight which family sold
                     the most.
                     <br>
+                    To see the graphs of the other years, <a href="">click here</a>.
+                </p>
+            </div>
+        </div>
+        <!-- holiday distribution -->
+        <div class="row justify-content-center pt-3 ">
+            <div class="col-xl-4  col-md-12 order-md-1 order-xl-1 d-flex flex-column justify-content-centerr">
+                <p class="accent">
+                    Holiday distribution.
+                </p>
+                <p>
+                    In this nested pay chart we can observe, first, in the inner pie the composition of the level of the
+                    holiday (i.e. whether it is celebrated at national, local or regional level) and second, in the
+                    outer pie the composition of each of the levels.
+                    We can extract that the majority of holidays are celebrated at the national level and that of the
+                    national ones the holidays are in the majority.
+                </p>
+            </div>
+            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-2">
+                <img src="content/img/plots/holidayDistribution.svg" class="img-fluid">
+            </div>
+        </div>
+        <!-- oil and sales correlation -->
+        <div class="row justify-content-center pt-5">
+            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1s d-flex flex-column">
+                <img src="content/img/plots/2014YearsSalesCorr.svg" class="img-fluid">
+                <img src="content/img/plots/byYearsSalesCorr.svg" class="img-fluid">
+                <img src="content/img/plots/allYearsSalesCorr.svg" class="img-fluid">
+            </div>
+            <div class="col-xl-4  col-md-12 order-md-1 order-xl-2 d-flex flex-column justify-content-center">
+                <p class="accent">
+                    Correlation of oil prices and Sales
+                </p>
+                <p>
+                    In order to see if the price of oil affects (either positively or negatively) sales, different
+                    correlation diagrams were made, where the average price of gasoline was tied against the average
+                    sales per month; by doing this the following observations were obtained.
+                    <br><br>
+                    In the first diagram, as an example, we can observe the data for the year 2014, we can observe a
+                    negative correlation, the higher the price of gasoline, the less sales are generated.
+                    <br><br>
+                    Using the data from the 5 years of the dataset (2013-2017) we can observe that the trend of the year
+                    2014 is repeated for all years.
+                    <br><br>
+                    Using a seaborn regplot plot, which uses a linear regression model, we can observe an estimate of
+                    the trend of the data.
+                    Considering this last graph we can conclude that the correlation between sales and the price of oil
+                    is negative, the higher the price of oil, the lower the sales are generated.
+                    <br><br>
                     To see the graphs of the other years, <a href="">click here</a>.
                 </p>
             </div>
