@@ -2,7 +2,7 @@
     --text-color: #5c67ad;
     --text-accent: #263387;
     --secondary-color: #f5d30f;
-    --muted-color: #e4e4e4
+    --muted-color: #f6f6f6;
 }
 
 body {
@@ -35,7 +35,7 @@ p {
 
 a {
     color: var(--text-accent);
-    text-decoration: underline dotted var(var(--text-accent));
+    text-decoration: underline var(--text-accent);
 }
 
 a:hover {
@@ -51,6 +51,20 @@ a:hover {
     color: var(--text-accent);
 }
 
+.important {
+    text-decoration: underline var(--text-accent);
+}
+
 .tables-descripcion>div>p {
     padding-bottom: 1vh;
+}
+
+.icon {
+    fill: var(--text-color);
+}
+
+.footer {
+    background-color: var(--muted-color);
+    font-size: 18px !important;
+    line-height: 1.2em !important;
 }

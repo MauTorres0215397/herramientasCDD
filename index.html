@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <link class="icon" rel="icon" type="image/x-icon" href="content/img/database-icon.svg">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -226,11 +227,11 @@
                 </div>
             </div>
         </div>
-        <!-- holiday distribution -->
+        <!-- holiday sales distribution -->
         <div class="row justify-content-center pt-3 ">
             <div class="col-xl-4  col-md-12 order-md-1 order-xl-1 d-flex flex-column justify-content-center">
                 <p class="accent">
-                    Holiday distribution.
+                    Holiday Sales distribution.
                 </p>
                 <p>
                     Using a boxplot we plot the distributions of sales made on holidays and on normal days.
@@ -249,8 +250,10 @@
                 <img src="content/img/plots/bplotHolidayVsNotHoliday.svg" class="img-fluid">
             </div>
         </div>
+        <!-- Sales per store -->
         <div class="row justify-content-center pt-5">
-            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 flex-column">
+            <div
+                class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 flex-column">
                 <img src="content/img/plots/salesByStore/storeSales.svg" class="img-fluid">
                 <img src="content/img/plots/salesByStore/bplotSalesStore.svg" class="img-fluid">
             </div>
@@ -265,6 +268,82 @@
                     In addition to this, a boxplot was made to see which data are outside the IQR, these data were drawn
                     with a different color, yellow for values after Q3 and dark blue for values below Q1.
                 </p>
+            </div>
+        </div>
+        <!-- Family sales heatmap -->
+        <div class="row justify-content-center pt-3 ">
+            <div class="col-xl-4  col-md-12 order-md-1 order-xl-1 d-flex flex-column justify-content-center">
+                <p class="accent">
+                    Heat map of sales by family
+                </p>
+                <p>
+                    In the map you can see by color the amount of sales of a certain family, in this case dairy
+                    products, as we can see the sales are concentrated in the province of Pichincha. This type of graph
+                    was achieved using geopandas and a file with the coordinates of Ecuador.
+                    To see the heat maps of other families,
+                    <br>
+                    <a data-bs-toggle="collapse" href="#collapseHeatMap" role="button" aria-expanded="false"
+                        aria-controls="collapseHeatMap">
+                        click here.
+                    </a>
+                </p>
+            </div>
+            <div class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-2">
+                <img src="content/img/plots/geopandas/dairyGeopandas.svg" class="img-fluid">
+            </div>
+        </div>
+        <!-- percetage of sales collapsable -->
+        <div class="collapse" id="collapseHeatMap">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-md-12">
+                    <p>
+                        The products sold in the "Favorita" store can be from the following families: <span
+                            class="important">automotive</span>, <span class="important">baby care</span>,
+                        beauty, <span class="important">beverages</span>, books, bread/bakery, celebration, cleaning,
+                        dairy, deli, eggs, frozen foods, <span class="important">grocery i</span>, grocery ii, hardware,
+                        home and kitchen i, home and kitchen ii, home appliances, home care, ladieswear, lawn and
+                        garden, lingerie, liquor,wine,beer, magazines, meats, personal care, pet supplies, players and
+                        electronics, poultry, prepared foods, produce, school and office supplies, seafood.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div
+                    class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 d-flex flex-column ">
+                    <p class="accent">Heat map of sales Automotive</p>
+                    <img src="content/img/plots/geopandas/automotiveGeopandas.svg" class="img-fluid">
+                </div>
+                <div
+                    class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 d-flex flex-column ">
+                    <p class="accent">Heat map of sales Baby Care</p>
+                    <img src="content/img/plots/geopandas/babyCareGeopandas.svg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row justify-content-center ">
+                <div
+                    class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 d-flex flex-column ">
+                    <p class="accent">Heat map of sales Beverages</p>
+                    <img src="content/img/plots/geopandas/beverageGeopandas.svg" class="img-fluid">
+                </div>
+                <div
+                    class="col-xl-4 d-flex align-items-center justify-content-center col-md-12 order-md-2 order-xl-1 d-flex flex-column ">
+                    <p class="accent">Heat map of sales Grocery</p>
+                    <img src="content/img/plots/geopandas/groceryGeopandas.svg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer pt-3">
+        <div class="row">
+            <div class="col-12">
+                <p>
+                    All the graphs on this page were made using various Python libraries such as pandas, numpy,
+                    matplotlib, seaborn, etc.
+                    If you want to explore the workbook, <a
+                        href="https://colab.research.google.com/drive/1MFCiGNciIunsOsjdqmh8q0OpgPWLRtb4?usp=sharing"
+                        target="_blank">click here</a>.
+                </p>
+                <p>Mauricio Torres Minguez</p>
             </div>
         </div>
     </div>
